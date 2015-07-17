@@ -19,7 +19,7 @@ import PyQt4.QtCore as QtCore
 # Local modules
 
 
-def drag_move_dec(widget_class):
+def drop_file_dec(widget_class):
     """
     A decorator offers drop file event functions for a qwidget class
     :param widget_class:
