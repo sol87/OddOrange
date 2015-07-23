@@ -22,8 +22,8 @@ import PyQt4.QtCore as QtCore
 def drop_file_dec(widget_class):
     """
     A decorator offers drop file event functions for a qwidget class
-    :param widget_class:
-    :return MovedClass:
+    :param widget_class: QObject
+    :return MovedClass: QObject
     """
 
     class DropClass(widget_class):

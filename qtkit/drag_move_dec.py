@@ -21,8 +21,8 @@ import PyQt4.QtCore as QtCore
 def drag_move_dec(widget_class):
     """
     A decorator offers drag and move event functions for a qwidget class
-    :param widget_class:
-    :return MovedClass:
+    :param widget_class: QObject
+    :return MovedClass: QObject
     """
 
     class MovedClass(widget_class):

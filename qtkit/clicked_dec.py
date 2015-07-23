@@ -22,8 +22,8 @@ import PyQt4.QtGui as QtGui
 def clicked_dec(widget_class):
     """
     A decorator offers clicked event functions for a qwidget class
-    :param widget_class:
-    :return MovedClass:
+    :param widget_class: QObject
+    :return MovedClass: QObject
     """
 
     class ClickedClass(widget_class):
@@ -31,7 +31,6 @@ def clicked_dec(widget_class):
         rightClicked = QtCore.pyqtSignal()
         leftDoubleClicked = QtCore.pyqtSignal()
         rightDoubleClicked = QtCore.pyqtSignal()
-        
 
         def __init__(self, *args, **kwargs):
             super(ClickedClass, self).__init__(*args, **kwargs)
