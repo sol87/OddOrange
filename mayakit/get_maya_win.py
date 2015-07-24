@@ -22,7 +22,7 @@ def get_maya_win(module="PySide"):
     """
     get a QMainWindow Object of maya main window
     :param module (optional): string "PySide"(default) or "PyQt4"
-    :return main_window: QMainWindow object
+    :return main_window: QWidget or QMainWindow object
     """
     prt = mui.MQtUtil.mainWindow()
     if module == "PyQt4":
