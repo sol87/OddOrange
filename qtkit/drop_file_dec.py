@@ -9,7 +9,6 @@
 # notes       :
 
 # Built-in modules
-import os
 
 # Third-party modules
 import PyQt4.QtCore as QtCore
@@ -59,7 +58,7 @@ if __name__ == "__main__":
     import PyQt4.QtGui as QtGui
     import sys
 
-    @drag_move_dec
+    @drop_file_dec
     class TestLabel(QtGui.QLabel):
         pass
 
