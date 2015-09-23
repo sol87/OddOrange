@@ -19,7 +19,7 @@ from pymel.core import *
 # Local modules
 
 
-def reference_maya_file(file_name):
+def reference(file_name):
     if os.path.isfile(file_name):
         name_space = os.path.splitext(os.path.basename(file_name))[0]
         return createReference(file_name, reference=True, force=True, namespace=name_space)

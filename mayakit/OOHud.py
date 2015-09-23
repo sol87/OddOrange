@@ -89,7 +89,7 @@ class OOHud(object):
         nfb6 = headsUpDisplay(nextFreeBlock=6)
         # ----create huds---- #
         headsUpDisplay('ww_fileName', section=0, block=nfb0,
-                       c="import maya_ctrls;maya_ctrls.get_scene_name()", event="NewSceneOpened",
+                       c="import pymel.core as pm;pm.sceneName()", event="NewSceneOpened",
                        lfs="large", dfs="large")
         headsUpDisplay('ww_timeLabel', section=5, block=nfb5,
                        c='"%s"' % now_time,
@@ -98,7 +98,7 @@ class OOHud(object):
                        c='"%s"' % self.__user_name,
                        lfs="large", dfs="large")
         headsUpDisplay('ww_focalLabel', section=4, block=nfb4,
-                       c="import maya_ctrls;maya_ctrls.get_current_cam_fl()", event="timeChanged",
+                       c="import pymel.core as pm;'FL: %.1f' % pm.getAttr(mc.lookThru(q=1)+'.focalLength')", event="timeChanged",
                        lfs="large", dfs="large")
         # ----turn on built in huds---- #
         mel.eval("setCameraNamesVisibility(1)")
