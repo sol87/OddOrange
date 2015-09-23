@@ -89,7 +89,7 @@ class OOHud(object):
         nfb6 = headsUpDisplay(nextFreeBlock=6)
         # ----create huds---- #
         headsUpDisplay('ww_fileName', section=0, block=nfb0,
-                       c="import pymel.core as pm;pm.sceneName()", event="NewSceneOpened",
+                       c="import pymel.core as pm;import os;os.path.basename(pm.sceneName())", event="NewSceneOpened",
                        lfs="large", dfs="large")
         headsUpDisplay('ww_timeLabel', section=5, block=nfb5,
                        c='"%s"' % now_time,
