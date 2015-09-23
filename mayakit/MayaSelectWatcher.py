@@ -12,7 +12,12 @@
 
 # Third-party modules
 import maya.OpenMaya as openmaya
-import PyQt4.QtCore as QtCore
+try:
+    import PyQt4.QtCore as QtCore
+    Signal = QtCore.pyqtSignal
+except ImportError:
+    import PySide.QtCore as QtCore
+    Signal = QtCore.Signal
 
 # Studio modules
 
@@ -24,7 +29,7 @@ class MayaSelectWatcher(QtCore.QObject):
     current_instance = None
 
     # 信号
-    something_selected = QtCore.pyqtSignal(list)
+    something_selected = Signal(list)
 
     def __init__(self, *args, **kwargs):
         super(MayaSelectWatcher, self).__init__(*args, **kwargs)
@@ -38,6 +43,7 @@ class MayaSelectWatcher(QtCore.QObject):
 
     def __del__(self):
         MayaSelectWatcher.current_instance = None
+        self.event_message.removeCallback("SelectionChanged")
 
     def __get_selected_list(self):
         nodes = []

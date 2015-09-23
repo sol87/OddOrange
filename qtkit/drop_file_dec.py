@@ -11,7 +11,12 @@
 # Built-in modules
 
 # Third-party modules
-import PyQt4.QtCore as QtCore
+try:
+    import PyQt4.QtCore as QtCore
+    Signal = QtCore.pyqtSignal
+except ImportError:
+    import PySide.QtCore as QtCore
+    Signal = QtCore.Signal
 
 # Studio modules
 
@@ -26,7 +31,7 @@ def drop_file_dec(widget_class):
     """
 
     class DropClass(widget_class):
-        droped_in = QtCore.pyqtSignal(list)
+        droped_in = Signal(list)
 
         def __init__(self, *args, **kwargs):
             super(DropClass, self).__init__(*args, **kwargs)

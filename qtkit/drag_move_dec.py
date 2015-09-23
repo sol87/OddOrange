@@ -11,7 +11,10 @@
 # Built-in modules
 
 # Third-party modules
-import PyQt4.QtCore as QtCore
+try:
+    import PyQt4.QtCore as QtCore
+except ImportError:
+    import PySide.QtCore as QtCore
 
 # Studio modules
 

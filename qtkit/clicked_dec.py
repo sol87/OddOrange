@@ -9,8 +9,10 @@
 # notes       :
 
 # Built-in modules
-import PyQt4.QtCore as QtCore
-import PyQt4.QtGui as QtGui
+try:
+    import PyQt4.QtCore as QtCore
+except ImportError:
+    import PySide.QtCore as QtCore
 
 # Third-party modules
 
@@ -68,6 +70,7 @@ def clicked_dec(widget_class):
 
 if __name__ == "__main__":
     import sys
+    import PyQt4.QtGui as QtGui
 
     @clicked_dec
     class TestLabel(QtGui.QLabel):
@@ -84,7 +87,7 @@ if __name__ == "__main__":
     
     def print_right_double():
         print "right double"
-        
+
     app = QtGui.QApplication(sys.argv)
     test = TestLabel("hello")
     test.leftClicked.connect(print_left)

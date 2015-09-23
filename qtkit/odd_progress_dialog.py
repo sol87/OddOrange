@@ -11,8 +11,12 @@
 # Built-in modules
 
 # Third-party modules
-import PyQt4.QtGui as QtGui
-import PyQt4.QtCore as QtCore
+try:
+    import PyQt4.QtCore as QtCore
+    import PyQt4.QtGui as QtGui
+except ImportError:
+    import PySide.QtCore as QtCore
+    import PySide.QtGui as QtGui
 
 # Studio modules
 
@@ -22,7 +26,7 @@ import PyQt4.QtCore as QtCore
 QtCore.QTextCodec.setCodecForTr(QtCore.QTextCodec.codecForName("gbk"))
 
 
-def odd_progress_dlg(num, info="处理中..."):
+def odd_progress_dialog(num, info="处理中..."):
     """
 
     :param num: range max
