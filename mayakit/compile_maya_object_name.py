@@ -7,7 +7,7 @@ import re, string
 import maya.cmds as mc
 #--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
 
-def compileMayaObjectName(objectName):
+def compile_maya_object_name(objectName):
     '''
     build a not exists maya object name...
     Exp: 

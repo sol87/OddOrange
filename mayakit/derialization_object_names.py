@@ -6,7 +6,7 @@
 import re, string
 import maya.cmds as mc
 #--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-def SerializationObjectNames(objectList, nameFormat='Temp*', start=0, padding=3):
+def derialization_object_names(objectList, nameFormat='Temp*', start=0, padding=3):
     '''
     objectList must is a list or a tuple
     nameFormat mutst have one " * "
