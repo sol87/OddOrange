@@ -23,7 +23,7 @@ except ImportError:
 # Local modules
 
 
-QtCore.QTextCodec.setCodecForTr(QtCore.QTextCodec.codecForName("gbk"))
+QtCore.QTextCodec.setCodecForTr(QtCore.QTextCodec.codecForName("utf8"))
 
 
 def odd_progress_dialog(num, info="处理中..."):

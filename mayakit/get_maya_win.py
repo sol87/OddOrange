@@ -34,7 +34,7 @@ def get_maya_win(module="mayaUI"):
         import PySide.QtGui as QtGui
         main_window = shiboken.wrapInstance(long(prt), QtGui.QWidget)
     elif module == "mayaUI":
-        main_window = ""
+        main_window = "MayaWindow"
     else:
         raise ValueError('param "module" must be "mayaUI" "PyQt4" or "PySide"')
     return main_window

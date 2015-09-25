@@ -29,7 +29,7 @@ logging.basicConfig(filename=os.path.join(os.environ["TMP"], 'OddVersion_log.txt
                     level=logging.WARN, filemode='a', format='%(asctime)s - %(levelname)s: %(message)s')
 
 
-class HiveAsset(object):
+class OOVersions(object):
     """
         每一个资产都会包含一个文件和这个文件的历史版本文件夹。
         每一个资产文件都有一个对应的json文件，里面记录了版本号（新的为None），上传者，上传信息，上传时间，文件md5值等信息。json文件和资产文件同时放在一个文件夹下。
