@@ -20,9 +20,9 @@ import PyQt4.QtCore as QtCore
 # Studio modules
 
 # Local modules
-from get_selected_channels import get_selected_channels
-from OOTimeWarper import OOTimeWarper
-from safe_to_string import safe_to_string
+from mayakit.get_selected_channels import get_selected_channels
+from mayakit.OOTimeWarper import OOTimeWarper
+from mayakit.safe_to_string import safe_to_string
 
 
 logging.basicConfig()
